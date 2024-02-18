@@ -1,7 +1,8 @@
+------------------
 #### MongoDB Script to generate (create/insert/update): 
 - Exactly 20 books check-outs for exactly 10 different borrowers and exactly 10 different books. Same borrower should not check out same book more than once
 - Exactly 10 of the above checkouts should have returned the book
-
+------------------
 db.Book_Copies.updateOne({$and:[{book_id:'0226743497'},{branch_id:1}]},{$set:{"book_loans":[{"borrower_id":'ID000499',"checkin_date":ISODate("2022-12-10T12:10:05Z"),"checkout_date":ISODate("2022-12-06T12:10:05Z"),"due_date":ISODate("2022-12-20T12:10:05Z")},{"borrower_id":'ID000002',"checkin_date":ISODate("2022-09-06T12:10:05Z"),"checkout_date":ISODate("2022-04-12T12:10:05Z"),"due_date":ISODate("2022-05-29T12:10:05Z")}]}})
 
 db.Book_Copies.updateOne({$and:[{book_id:'0345293711'},{branch_id:1}]},{$set:{"book_loans":[{"borrower_id":'ID000227',"checkin_date":ISODate("2022-12-10T12:10:05Z"),"checkout_date":ISODate("2022-11-06T12:10:05Z"),"due_date":ISODate("2022-11-20T12:10:05Z")},{"borrower_id":'ID000219',"checkin_date":ISODate("2022-10-06T12:10:05Z"),"checkout_date":ISODate("2022-09-12T12:10:05Z"),"due_date":ISODate("2022-10-29T12:10:05Z")}]}})
