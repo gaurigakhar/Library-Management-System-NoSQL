@@ -21,3 +21,5 @@ db.Book_Copies.updateOne({$and:[{book_id:'0771020139'},{branch_id:1}]},{$set:{"b
 db.Book_Copies.updateOne({$and:[{book_id:'0060974494'},{branch_id:1}]},{$set:{"book_loans":[{"borrower_id":'ID000219',"checkin_date":ISODate("2022-01-10T12:10:05Z"),"checkout_date":ISODate("2022-01-06T12:10:05Z"),"due_date":ISODate("2022-01-20T12:10:05Z")},{"borrower_id":'ID000227',"checkin_date":ISODate("2022-02-06T12:10:05Z"),"checkout_date":ISODate("2022-02-01T12:10:05Z"),"due_date":ISODate("2022-02-29T12:10:05Z")}]}})
 
 db.Book_Copies.updateOne({$and:[{book_id:'1551668971'},{branch_id:1}]},{$set:{"book_loans":[{"borrower_id":'ID000002',"checkin_date":ISODate("2022-02-10T12:10:05Z"),"checkout_date":ISODate("2022-02-06T12:10:05Z"),"due_date":ISODate("2022-02-20T12:10:05Z")},{"borrower_id":'ID000499',"checkin_date":ISODate("2022-03-06T12:10:05Z"),"checkout_date":ISODate("2022-03-01T12:10:05Z"),"due_date":ISODate("2022-03-05T12:10:05Z")}]}})
+
+db.Book_Copies.find({$and:[{book_id:{$in:['0226743497','0345293711','3404121686','0915811642','0312312261','0192815466','0881848581','0771020139','0060974494','1551668971']}},{"branch_id":1}]})
